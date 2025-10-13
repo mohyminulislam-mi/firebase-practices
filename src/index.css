@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.nav-ul-a a {
+    margin-right: 8px;
+}
