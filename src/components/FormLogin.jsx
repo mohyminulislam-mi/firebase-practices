@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./../firebase/firebase.init";
+import { IoIosEyeOff, IoMdEye } from "react-icons/io";
 const FormLogin = () => {
   const [error, setError] = useState("");
   const [singIn, setSingIn] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -26,8 +28,12 @@ const FormLogin = () => {
         setError(error.message);
       });
   };
+  const handleShowPassword = (e) => {
+    e.preventDefault();
+    setShowPassword(!showPassword);
+  };
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Login now!</h1>
@@ -49,12 +55,20 @@ const FormLogin = () => {
                   name="email"
                 />
                 <label className="label">Password</label>
-                <input
-                  type="password"
-                  className="input"
-                  placeholder="Password"
-                  name="password"
-                />
+                <div className="flex">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="input"
+                    placeholder="Password"
+                    name="password"
+                  />
+                  <button
+                    className="ml-[-20px] z-50"
+                    onClick={handleShowPassword}
+                  >
+                    {showPassword ? <IoMdEye /> : <IoIosEyeOff />}
+                  </button>
+                </div>
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
