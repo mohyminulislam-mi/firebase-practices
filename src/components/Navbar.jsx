@@ -31,6 +31,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About</NavLink>
               <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/formlogin">Login</NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">Fire on Base</a>
@@ -40,6 +41,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/formlogin">Login</NavLink>
           </ul>
         </div>
         <div className="navbar-end">

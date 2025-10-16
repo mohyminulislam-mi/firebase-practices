@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Root from "./Root/Root";
 import Contact from "./components/Contact";
+import FormLogin from "./components/FormLogin";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/", Component: Home },
       { path: "/about", Component: About },
       { path: "/contact", Component: Contact },
+      { path: "/formlogin", Component: FormLogin },
     ],
   },
 ]);
