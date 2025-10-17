@@ -8,6 +8,8 @@ import About from "./pages/About";
 import Root from "./Root/Root";
 import Contact from "./components/Contact";
 import FormLogin from "./components/FormLogin";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,8 @@ const router = createBrowserRouter([
       { path: "/about", Component: About },
       { path: "/contact", Component: Contact },
       { path: "/formlogin", Component: FormLogin },
+      { path: "/login", Component: Login },
+      { path: "/register", Component: Register },
     ],
   },
 ]);

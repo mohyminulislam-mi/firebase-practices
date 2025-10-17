@@ -1,10 +1,10 @@
 import React from "react";
-import Login from "../components/Login";
+import FormLogin from "../components/FormLogin";
 
 const Home = () => {
   return (
-    <div className="text-center h-screen">
-      <Login />
+    <div>
+      <FormLogin />
     </div>
   );
 };
